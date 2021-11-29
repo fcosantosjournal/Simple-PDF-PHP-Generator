@@ -16,7 +16,7 @@ createPage($content, $pdf);
 $content = "Hello Word two!";
 createPage($content, $pdf);
 
-$pdf->write2DBarcode("https://google.com/validator/$id", 'QRCODE,L', 150, 8, 50, 50, $style, 'N');
+$pdf->write2DBarcode("https://yoursite.com/exampleValidator/$id", 'QRCODE,L', 150, 8, 50, 50, $style, 'N');
 
 $pdf->Output("$id.pdf", "I");
 ```
@@ -49,7 +49,7 @@ createPage($content, $pdf);
 #### This QRCode Generator, will go to created a QRCode on the last started Page.
 
 ```sh
-$pdf->write2DBarcode("https://yoursite.com/exampleValidator/<b>$id</b>", 'QRCODE,L', 150, 8, 50, 50, $style, 'N');
+$pdf->write2DBarcode("https://yoursite.com/exampleValidator/$id", 'QRCODE,L', 150, 8, 50, 50, $style, 'N');
 ```
 
 #### Create a Output for the file
